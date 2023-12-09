@@ -87,8 +87,7 @@ public MultiAccessList(int desiredCapacity)
 	   int newIndex = newPosition;
 	   int lastIndex = numberOfEntries;
 
-      // Move each entry to next higher index, starting at end of
-      // list and continuing until the entry at newIndex is moved
+ 
       for (int index = lastIndex; index >= newIndex; index--)
 	      position_Access[index + 1] = position_Access[index];
 	}
@@ -143,10 +142,8 @@ return removed;
   if ((givenPosition >= 1) && (givenPosition <= numberOfEntries))
       {
          assert !isEmpty();
-         V result = position_Access[givenPosition]; // Get entry to be removed
+         V result = position_Access[givenPosition]; 
 
-         // Move subsequent entries towards entry to be removed,
-         // unless it is last in list
          if (givenPosition < numberOfEntries)
             removeGap(givenPosition);
          
@@ -161,10 +158,9 @@ return removed;
       if ((givenPosition >= 1) && (givenPosition <= numberOfEntries))
       {
          assert !isEmpty();
-         V result = position_Access[givenPosition]; // Get entry to be removed
+         V result = position_Access[givenPosition]; 
 
-         // Move subsequent entries towards entry to be removed,
-         // unless it is last in list
+       
          if (givenPosition < numberOfEntries)
             removeGap(givenPosition);
          removeHash(result);
@@ -281,7 +277,7 @@ else
 }
 
  public V [] printPositionValue(){
-V[] result = (V[])new Object[numberOfEntries]; // Unchecked cast
+V[] result = (V[])new Object[numberOfEntries]; 
       for (int index = 0; index < numberOfEntries; index++)
       {
          result[index] = position_Access[index + 1];
