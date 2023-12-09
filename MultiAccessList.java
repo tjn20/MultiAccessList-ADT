@@ -13,7 +13,7 @@ import java.io.IOException;
 
 /**
  *
- * @author tjnla
+ * @author tjn20
  */
 public class MultiAccessList <K,V> implements MultiAcessKeyListInterface<K,V>{
 private Object [] hashTable;
