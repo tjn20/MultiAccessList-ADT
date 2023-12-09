@@ -54,9 +54,8 @@
 
 To use **MultiAccessKeyList**, follow these steps:
 
-1. **Methods Implementation:**
-   Read how each method operates in the given interface.
+1. Read how each method operates in the given interface.
 2. **Instantiate MultiAccessKeyList:**
-   ``` Java
-   list= new MultiAccessList();
+   ``` 
+   list= new MultiAccessList(); //Java
      
