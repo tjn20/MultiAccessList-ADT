@@ -11,6 +11,6 @@ MultiAccessKeyList is a powerful Keyed Abstract Data Type (ADT) designed for seq
 - Capacity Limit: While the list capacity can be customized, it must not exceed 10,000. An exception is triggered if the requested capacity surpasses this limit, preventing list generation.
 
 - Efficient Methods:
-- - Print Keys: Efficiently prints the keys' values without traversing the entire list.
-- - Existence Checks: Allows checking if a key's value exists in the list.
-- - Direct Value Checks: Provides a method to check the value directly.
+ - Print Keys: Efficiently prints the keys' values without traversing the entire list.
+ - Existence Checks: Allows checking if a key's value exists in the list.
+ - Direct Value Checks: Provides a method to check the value directly.
