@@ -24,9 +24,9 @@
   
 - **Adding Entries at a specified position:** **O(n)** in the worst case since we have to invoke the 'makeRoom' method when adding an item to the 'positionAccess' list (sequential list). However, adding to the hashTable remains a constant time operation with **O(1)** efficiency.
 
-- ** Removing an entry based on its Key:** **O(n)** in the worst case as it involves traversing the entire linked chain at a particular index.
+- **Removing an entry based on its Key:** **O(n)** in the worst case as it involves traversing the entire linked chain at a particular index.
   
-- **Removing an entry based on its position:** **O(\(n^{2}\)** in the worst case since removing an item from a specified position involves a gap removal operation with O(n) time complexity. If the key is unavailable for direct removal from the hashTable, a method with nested loops is invoked, resulting in a O(n^2) time complexity.
+- **Removing an entry based on its position:** **O(n^2)** in the worst case since removing an item from a specified position involves a gap removal operation with O(n) time complexity. If the key is unavailable for direct removal from the hashTable, a method with nested loops is invoked, resulting in a O(n^2) time complexity.
 
 - **Empty list Checks:** **O(1)** in the worst case because it has a constant time operation.
   
