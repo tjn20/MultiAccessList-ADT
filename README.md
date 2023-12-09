@@ -1,4 +1,4 @@
-# MultiAccessList-ADT
+# Java-MultiAccessList-ADT
 
 ## Overview
 
@@ -6,31 +6,57 @@
 
 ## Features
 
+- **Access:** The ADT seamlessly supports sequential and hash table access, providing flexibility in how you interact with the data.
 - **CSV Data Storage:** The ADT can store information from CSV files, allowing manipulation such as item removal and existence checks.
 
 - **Automatic Capacity Handling:** The list has a default minimum capacity of ten items. Any requested capacity below 10 is automatically set to this minimum, ensuring a stable base.
 
 - **Capacity Limit:** While the list capacity can be customized, it must not exceed 10,000. An exception is triggered if the requested capacity surpasses this limit, preventing list generation.
 
-- **Efficient Methods:**
+- **Some Methods:**
   - **Print Keys:** Efficiently prints the keys' values without traversing the entire list.
   - **Existence Checks:** Allows checking if a key's value exists in the list.
   - **Direct Value Checks:** Provides a method to check the value directly.
 
-## Big O Analysis
+## Big O Analysis Of Used Methods
 
-- **Key-Value Printing:** **O(n)** - Linear time complexity as it involves traversing the entire list.
+- **Adding Entries at the end of the list:** **O(1)** in the worst case since the time taken to add an entry remains constant.
   
-- **Existence Checks:** **O(1)** on average, **O(n)** in the worst case due to potential linked chaining in the hash table.
+- **Adding Entries at a specified position:** **O(n)** in the worst case since we have to invoke the 'makeRoom' method when adding an item to the 'positionAccess' list (sequential list). However, adding to the hashTable remains a constant time operation with **O(1)** efficiency.
 
-- **Direct Value Checks:** **O(1)** on average, **O(n)** in the worst case due to potential linked chaining in the hash table.
+- ** Removing an entry based on its Key:** **O(n)** in the worst case as it involves traversing the entire linked chain at a particular index.
+  
+- **Removing an entry based on its position:** **O(\(n^{2}\)** in the worst case since removing an item from a specified position involves a gap removal operation with O(n) time complexity. If the key is unavailable for direct removal from the hashTable, a method with nested loops is invoked, resulting in a O(n^2) time complexity.
 
-- **CSV Data Loading:** **O(m + n)** - Linear time complexity, where **m** is the number of items in the CSV file and **n** is the current number of items in the list.
+- **Empty list Checks:** **O(1)** in the worst case because it has a constant time operation.
+  
+- **Clearing list:** **O(n)** in the worst case since it involves entering a loop to clear both lists.
 
-## Getting Started
+- **Determining If Maximum Capacity is Reached:** **O(1)** in the worst case because it has a constant time operation.
+
+- **Printing Values From hashTable List:** **O(n^2)** in the worst case because it enters nested loops to traverse through the linked chain.
+
+- **Key-Value Printing:** **O(n)** in the worst case because the method gracefully enters a loop to search for the specified key.
+
+- **Printing Values From PositionAccess List:** **O(n)** in the worst case because it enters loops to traverse through the list.
+  
+- **Contains Key-Value:** **O(n)** in the worst case because the method enters a loop to search for the specified key.
+  
+- **Contains Value:** **O(n)** in the worst case because the method enters a loop to search for the desired value.
+  
+- **Determining list Size:** **O(1)** in the worst case because it has a constant time operation.
+
+- **Printing Value based on given position:** **O(1)** in the worst case because it has a constant time operation.
+
+- **CSV Data Loading:** **O(n)** in the worst case since it enters a loop to insert all key-value pairs from the file.
+
+## How To Use
 
 To use **MultiAccessKeyList**, follow these steps:
 
-1. **Instantiate MultiAccessKeyList:**
-   ```python
-   my_list = MultiAccessKeyList()
+1. **Methods Implementation:**
+   ``` Read how each method operates in the given interface.
+2. **Instantiate MultiAccessKeyList:**
+   ``` Java
+   list= new MultiAccessList();
+     
